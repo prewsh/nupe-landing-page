@@ -1,0 +1,72 @@
+.btn{
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 90%;
+    text-align: center;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 219px;
+    margin: 0px auto;
+}
+
+p{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+h1{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 57px;
+    color: #FFFFFF;
+}
+
+/* hero styling starts here  */
+
+.Left-hero-text{
+    margin-top: 100px;
+}
+
+.hero-area{
+    background: #2351C9;
+    height: 100vh;
+    margin: 0px -15px;
+    padding: 102px;
+}
+
+.left-hero-p1{
+    /* margin-top: 169px; */
+    margin-bottom: 50px;
+}
+
+.left-hero-h1{
+    margin-bottom: 37px;
+}
+
+.hero-form{
+    margin-top: 64px;
+}
+
+.hero-form-control{
+    width: 368px !important;
+    margin-left: -15px;
+}
+
+.email-btn{
+    background: #FD344B !important;
+    border-radius: 5px;
+    width: 187px;
+    font-size: 12px;
+    margin-left: -8px;
+}
+
+/* hero styling ends here  */
