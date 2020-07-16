@@ -1,22 +1,39 @@
+.container-fluid{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    background-color: rgba(1, 1, 1, 0.164) !important;
+    border: none !important;
+    box-shadow: none;
+}
+
 .btn{
     font-family: "Ubuntu";
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 90%;
     text-align: center;
-    border: 2px solid #FFFFFF;
+    /* border: 2px solid #FFFFFF; */
     box-sizing: border-box;
     border-radius: 5px;
-    width: 219px;
+    /* width: 219px; */
     margin: 0px auto;
+    color: #FFF;
+}
+
+.nav-btn{
+    border: 2px solid #FFFFFF;
 }
 
 p{
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 28px;
     color: #FFFFFF;
 }
@@ -33,14 +50,16 @@ h1{
 /* hero styling starts here  */
 
 .Left-hero-text{
-    margin-top: 100px;
+    margin-top: 120px;
+    padding-left: 30px;
 }
 
 .hero-area{
-    background: #2351C9;
-    height: 100vh;
-    margin: 0px -15px;
-    padding: 102px;
+    position: relative;
+    background: #3D6EEA;
+    height: 100%;
+    width: 100%;
+    margin: 0px 0px;
 }
 
 .left-hero-p1{
@@ -52,21 +71,271 @@ h1{
     margin-bottom: 37px;
 }
 
+.Right-hero-text > img{
+    width: 100%;
+}
+
 .hero-form{
     margin-top: 64px;
+    padding-bottom: 50px;
+    justify-content: center;
 }
 
 .hero-form-control{
     width: 368px !important;
-    margin-left: -15px;
+    /* margin-left: -15px; */
+}
+
+.hero-image{
+    /* width: 40%;
+    height: auto; */
+    /* padding-left: 30px; */
+    position: absolute;
+    top: 12%;
+    right: 0%;
 }
 
 .email-btn{
     background: #FD344B !important;
     border-radius: 5px;
-    width: 187px;
     font-size: 12px;
-    margin-left: -8px;
+    /* margin-left: 4px; */
 }
 
+/* countdown styling here  */
+
+.hero-countdown-timer{
+    background: #0C37AD;
+    width: 100%;
+    height: 417px;
+    padding: 70px 30px;
+}
+
+.countdown-container > p{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    margin-left: 20px;
+
+    color: #FFFFFF;
+}
+
+#countdown {
+    width: 100%;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  label {
+    clear: both;
+    display: block;
+  }
+
+  #countdown span {
+    padding: 14px;
+    background: #FFFFFF;
+    color: #201E1E;
+    margin: 31px;
+    font-size: 26px;
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    width: 120px;
+    height: 131px;
+    display: block;
+  /*   float: left; */
+    border-right: 1px solid #FFF;
+  }
+  u
+  #countdown span:last-child {
+    border-right: 1px solid #313233;
+  }
+
+/* countdown styling ends here  */
+
 /* hero styling ends here  */
+
+/* feature styling  */
+
+.card-bodi{
+    max-width: 310px;
+    padding: 12px;
+    margin: 12px;
+}
+
+.feature-card-text{
+    margin-left: 15px;
+}
+
+.feature-card-text h3{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+
+    color: #000000;
+}
+
+.feature-card-text p{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #86868A;
+}
+
+/* feature styling ends here  */
+
+
+/* app picture styling :start */
+
+.app-pics{
+    margin: 0px auto;
+    background-image: url(../img/Ellipse\ 10.png);
+    background-position: center;
+    background-repeat: no-repeat; 
+    /* background-size: cover; */
+}
+
+.app-pics-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-pics-row :nth-child(2){
+    height: 80%;
+}
+
+
+/* app picture styling ends  */
+
+/* footer styling  */
+
+.page-footer{
+    /* width: 100%; */
+    background: #0C37AD;
+}
+
+.footer-items-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-center{
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+/* footer styling ends  */
+
+
+@media only screen and (max-width: 600px)  {
+
+    p{
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    
+    h1{
+        font-family: "Ubuntu";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 55px;
+        color: #FFFFFF;
+    }
+
+    .navbar {
+        flex-wrap: nowrap;
+    }
+
+
+    .btn{
+        /* width: 150px; */
+        padding: .64rem 1.14rem;
+        font-size: 0.675rem;
+    }
+
+    .Left-hero-text {
+        text-align: center;
+        padding-right: 5px;
+        margin-top: 120px;
+        padding-left: unset;
+    }
+
+    .left-hero-p1 {
+        font-size: 1.2rem;
+        margin-bottom: 35px;
+    }
+
+    .left-hero-h1 {
+        margin-bottom: 35px;
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .hero-area {
+        position: unset;
+    }
+
+    .main-hero-part {
+        flex-direction: column !important;
+    }
+
+    .hero-image {
+        position: unset
+    }
+
+    .hero-form {
+        flex-wrap: unset;
+        margin-top: 54px;
+        padding-bottom: 50px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .hero-form-control {
+        width: 100% !important;
+    }
+
+    .hero-countdown-timer {
+        height: 100%;
+    }
+
+    .countdown-container > p {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    #countdown {
+        justify-content: center;
+        padding-left: 0px;
+    }
+
+    .feature-card-text h3 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .app-pic{
+        width: unset;
+    }
+}

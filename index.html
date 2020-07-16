@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Nubes</title>
   <!-- MDB icon -->
-  <link rel="icon" href="img/nubes logo 2.png" type="image/x-icon">
+  <link rel="icon" href="img/nubes logo.png" type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->
@@ -16,6 +16,12 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- light box  -->
+  <link rel="stylesheet" href="./css/simple-lightbox.min.css">
+  <!-- AOS  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- anime.css  -->
+  <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>  
 </head>
 <body>
 
@@ -25,14 +31,12 @@
   <div class="container-fluid">
 
      <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg d-flex align-items-center fixed-top logo">
-      <a class="navbar-brand" href="#"><img src="./img/nubes logo 2.png" alt="" srcset=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "><img src="./assets/Breadcomb.svg" alt=""></span>
-      </button>
-      <div class="collapse text-white navbar-collapse  align-items-center justify-content-end" id="navbarNav">
+    <nav data-aos="fade-up" data-aos-anchor-placement="top-center" class="navbar navbar-expand-lg d-flex justify-content-between align-items-center fixed-top logo">
+      <a class="navbar-brand" href="#"><img class="img-fluid" src="./img/nubes logo 2.png" alt="" srcset=""></a>
+      <!-- <div class="spacer"></div> -->
+      <div class="align-items-center justify-content-end" id="navbarNav">
         <ul class="nav navbar-nav  navbar-right">
-          <button type="button" class="btn landing-btn ">Cet Early Access</button>
+          <button type="button" class="btn nav-btn landing-btn ">Get Early Access</button>
         </ul>
       </div>
     </nav>
@@ -41,37 +45,165 @@
      <!-- hero area  -->
      <div class="hero-area d-flex flex-column justify-content-center align-items-start">
 
-      <div class="Left-hero-text ">
-        <p class="left-hero-p1"> EASY TO USE - FAST - SECURE </p>
-
-        <h1 class="left-hero-h1">Store, Sync and Manage <br> 
-          your Files Online</h1>
-
-        <p class="left-hero-p2"> Nubes is a modern storage space designed <br>
-          to ease you the stress of a filled up <br>
-          internal storage </p>
-
-          <form class="form-inline hero-form">
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="Email" class="sr-only">Email</label>
-              <input type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
-            </div>
-            <button type="submit" class="btn email-btn btn-primary mb-2">Get Early Access</button>
-          </form>
+      <div class="main-hero-part container-fluid flex-row d-flex justify-content-start align-items-start  ">
+        <div data-aos="fade-right"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="400"
+        data-aos-duration="2000" class="Left-hero-text ">
+          <p class="left-hero-p1 animate__animated animate__backInLeft animate__delay-1s"> EASY TO USE - FAST - SECURE </p>
+  
+          <h1 class="left-hero-h1 animate__animated animate__backInLeft animate__delay-2s">Store, Sync and Manage <br> 
+            your Files Online</h1>
+  
+          <p class="left-hero-p2 animate__animated animate__backInLeft animate__delay-3s"> Nubes is a modern storage space designed <br>
+            to ease you the stress of a filled up
+            internal storage </p>
+  
+            <form class="form-inline hero-form">
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="Email" class="sr-only">Email</label>
+                <input type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
+              </div>
+              <button type="submit" class="btn email-btn btn-primary mb-2">Get Early Access</button>
+            </form>
+        </div>
+  
+        <!-- <div class="Right-hero-text ml-auto"> -->
+          <div  class="right-side-image "  >
+            <img   class="img-fluid hero-image animate__animated animate__swing" src="./img/home screen plus circles.png" alt="" srcset="">                  
+          </div>
+        <!-- </div> -->
       </div>
+      
 
-      <div class="Right-hero-text ml-auto">
-
+      <div data-aos="fade-in" class="hero-countdown-timer">
+        <div class="countdown-container">
+          <p>  Our official Launch </p>
+          <div id="countdown">    </div>
+        </div>
       </div>
 
     </div>
     <!-- hero area ends here  -->
+
+    <!-- FEATURE SECTION  -->
+
+    <div data-aos="fade-in" class="feature-area container-fluid d-flex justify-content-center align-items-center flex-wrap ">
+
+      <div class="">
+        <div data-aos="fade-left" data-aos-duration="2000" class="card-bodi d-flex justify-content-center align-items-center ">
+          <div class="card-image"> <img src="./img/access icon.png" class=" img-fluid " alt="...">
+          </div>
+          <div class="feature-card-text" style="color: black;">
+            <h3 style="color: black;"> Easy access</h3>
+            <p style="color: black;"> Access your files on App easily and fast</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div data-aos="fade-left" data-aos-duration="3000" class="card-bodi d-flex justify-content-center align-items-center ">
+          <div class="card-image"> <img src="./img/storage icon.png" class=" img-fluid " alt="...">
+          </div>
+          <div class="feature-card-text" style="color: black;">
+            <h3 style="color: black;"> 10GB Free Storage </h3>
+            <p style="color: black;"> Save up to 10GB files
+              for free</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div data-aos="fade-left" data-aos-duration="4000" class="card-bodi d-flex justify-content-center align-items-center ">
+          <div class="card-image"> <img src="./img/manage icon (1).png" class=" img-fluid " alt="...">
+          </div>
+          <div class="feature-card-text" style="color: black;">
+            <h3 style="color: black;">Manage Your Space</h3>
+            <p style="color: black;"> Access your files on App
+              easily and fast</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <!-- FEATURE ENDS HERE  -->
+
+    <!-- Phone display area starts here  --> 
+      
+
+    <div data-aos="fade-in"  class="container-fluid pt-4 app-pics d-flex flex-column align-items-center justify-content-center flex-wrap">
+      <div data-aos="fade-in"  class="row app-pics-row p-0 pb-1 d-flex flex-wrap  ">
+         <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"  > <a href="./img/SPLASH SCREEN (1).png" class="big"> <img class="img-fluid"  src="./img/SPLASH SCREEN (1).png" alt="img.png" class="position image-fluid"></a></div>
+           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic" > <a href="./img/ONBOARDING 2 (1).png" class="big"> <img class="img-fluid" src="./img/ONBOARDING 2 (1).png" alt="img.png" class="position image-fluid"></a></div>
+             <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/SIGN UP (1).png" class="big"> <img class="img-fluid" src="./img/SIGN UP (1).png" alt="img.png" class="position image-fluid"></a></div>
+      </div>
+
+      <div data-aos="fade-in" class="row app-pics-row p-0 pb-1">
+          <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/SIGN IN (1).png" class="big"> <img class="img-fluid" src="./img/SIGN IN (1).png" alt="img.png" class="position"></a></div>
+            <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/home screen (2).png" class="big"> <img class="img-fluid"  src="./img/home screen (2).png" alt="img.png" class="position"></a></div>
+              <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/FAVORITES (2).png" class="big"> <img class="img-fluid" src="./img/FAVORITES (2).png" alt="img.png" class="position"></a></div>
+      </div>
+
+    </div>
+
+    <!-- phone display area ends here  -->
+
+
+
+    <!-- footer starts here  -->
+    <!-- Footer -->
+<footer data-aos="fade-up" class="page-footer font-small ">
+
+  <!-- Footer Links -->
+  <div class="container">
+
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+      <!-- Grid column -->
+      <div data-aos="zoom-in-up" data-aos-duration="2500" class="col-md-8 col-12 mt-5 footer-items-container">
+        <p >Be part of the first to try it <br> - Get early access</p>
+        <form class="form-inline hero-form footer-hero-form">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="Email" class="sr-only">Email</label>
+            <input type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
+          </div>
+          <button type="submit" class="btn email-btn btn-primary mb-2">Get Early Access</button>
+        </form>
+      </div>
+      <!-- Grid column -->
+
+
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class=" text-center py-3">(c) 2020  |
+    <a href="#">   THEELIAS & PWERSHY</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 
   </div>
 
 
   <!-- End your project here-->
+
+
+    <!-- AOS  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -82,7 +214,11 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <!-- light box  -->
+  <script src="./js/simple-lightbox.min.js"></script>
+
+
 
 </body>
 </html>
