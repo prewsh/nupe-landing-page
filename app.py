@@ -27,7 +27,7 @@ def index():
         cur = mysql.connection.cursor()
         cur.execute("INSERT INTO users(email) VALUES(%s)",[email])
         mysql.connection.commit()
-        cur.close() 
+        cur.close()  
         return redirect('/')
     return render_template('index.html')
 
