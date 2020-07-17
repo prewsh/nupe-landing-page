@@ -6,18 +6,22 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Nubes</title>
   <!-- MDB icon -->
-  <link rel="icon" href="img/nubes logo.png" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='img/nubes logo favicon 2.svg') }} " type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- <link rel="stylesheet" href="css/mdb.min.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
   <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <!-- light box  -->
-  <link rel="stylesheet" href="./css/simple-lightbox.min.css">
+  <!-- <link rel="stylesheet" href="./css/simple-lightbox.min.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='./css/simple-lightbox.min.css') }}">
   <!-- AOS  -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- anime.css  -->
@@ -32,11 +36,10 @@
 
      <!-- Navbar -->
     <nav data-aos="fade-up" data-aos-anchor-placement="top-center" class="navbar navbar-expand-lg d-flex justify-content-between align-items-center fixed-top logo">
-      <a class="navbar-brand" href="#"><img class="img-fluid" src="./img/nubes logo 2.png" alt="" srcset=""></a>
-      <!-- <div class="spacer"></div> -->
+      <a class="navbar-brand" href="form-area-1"><img class="img-fluid" src="{{ url_for('static', filename='./img/nubes logo reduced 2.svg')}}" alt="" srcset=""></a>
       <div class="align-items-center justify-content-end" id="navbarNav">
         <ul class="nav navbar-nav  navbar-right">
-          <button type="button" class="btn nav-btn landing-btn ">Get Early Access</button>
+          <a href="{{ url_for('static', filename='#')}} "> <button type="button" href="" class="btn nav-btn landing-btn "> Get Early Access </button> </a>
         </ul>
       </div>
     </nav>
@@ -59,18 +62,18 @@
             to ease you the stress of a filled up
             internal storage </p>
   
-            <form class="form-inline hero-form">
+            <form method="POST" id="form-area-1" class="form-inline hero-form">
               <div class="form-group mx-sm-3 mb-2">
                 <label for="Email" class="sr-only">Email</label>
-                <input type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
+                <input name="email" type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
               </div>
-              <button type="submit" class="btn email-btn btn-primary mb-2">Get Early Access</button>
+              <button data-target="success_modal" data-toggle="modal" type="submit" class="btn email-btn btn-primary mb-2">Get Early Access</button>
             </form>
         </div>
   
         <!-- <div class="Right-hero-text ml-auto"> -->
           <div  class="right-side-image "  >
-            <img   class="img-fluid hero-image animate__animated animate__swing" src="./img/home screen plus circles.png" alt="" srcset="">                  
+            <img   class="img-fluid hero-image animate__animated animate__pulse animate__infinite	infinite animate__delay-15s animate__slower 12s " src="{{ url_for('static', filename='./img/home screen plus circles.png') }}" alt="" srcset="">                  
           </div>
         <!-- </div> -->
       </div>
@@ -92,7 +95,7 @@
 
       <div class="">
         <div data-aos="fade-left" data-aos-duration="2000" class="card-bodi d-flex justify-content-center align-items-center ">
-          <div class="card-image"> <img src="./img/access icon.png" class=" img-fluid " alt="...">
+          <div class="card-image"> <img src="{{ url_for('static', filename='./img/access icon.png')}}" class=" img-fluid " alt="...">
           </div>
           <div class="feature-card-text" style="color: black;">
             <h3 style="color: black;"> Easy access</h3>
@@ -103,7 +106,7 @@
 
       <div class="">
         <div data-aos="fade-left" data-aos-duration="3000" class="card-bodi d-flex justify-content-center align-items-center ">
-          <div class="card-image"> <img src="./img/storage icon.png" class=" img-fluid " alt="...">
+          <div class="card-image"> <img src="{{ url_for('static', filename='./img/storage icon.png')}}" class=" img-fluid " alt="...">
           </div>
           <div class="feature-card-text" style="color: black;">
             <h3 style="color: black;"> 10GB Free Storage </h3>
@@ -115,7 +118,7 @@
 
       <div class="">
         <div data-aos="fade-left" data-aos-duration="4000" class="card-bodi d-flex justify-content-center align-items-center ">
-          <div class="card-image"> <img src="./img/manage icon (1).png" class=" img-fluid " alt="...">
+          <div class="card-image"> <img src="{{ url_for('static', filename='./img/manage icon (1).png')}}" class=" img-fluid " alt="...">
           </div>
           <div class="feature-card-text" style="color: black;">
             <h3 style="color: black;">Manage Your Space</h3>
@@ -134,20 +137,22 @@
 
     <div data-aos="fade-in"  class="container-fluid pt-4 app-pics d-flex flex-column align-items-center justify-content-center flex-wrap">
       <div data-aos="fade-in"  class="row app-pics-row p-0 pb-1 d-flex flex-wrap  ">
-         <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"  > <a href="./img/SPLASH SCREEN (1).png" class="big"> <img class="img-fluid"  src="./img/SPLASH SCREEN (1).png" alt="img.png" class="position image-fluid"></a></div>
-           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic" > <a href="./img/ONBOARDING 2 (1).png" class="big"> <img class="img-fluid" src="./img/ONBOARDING 2 (1).png" alt="img.png" class="position image-fluid"></a></div>
-             <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/SIGN UP (1).png" class="big"> <img class="img-fluid" src="./img/SIGN UP (1).png" alt="img.png" class="position image-fluid"></a></div>
+         <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"  > <a href="{{ url_for('static', filename='./img/SPLASH SCREEN (1).png')}}" class="big"> <img class="img-fluid" src="{{ url_for('static', filename='./img/SPLASH SCREEN (1).png')}}"  alt="img.png" class="position image-fluid"></a></div>
+           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic" > <a href="{{ url_for('static', filename='./img/ONBOARDING 2 (1).png')}}" class="big"> <img class="img-fluid" src="{{ url_for('static', filename='./img/ONBOARDING 2 (1).png')}}" alt="img.png" class="position image-fluid"></a></div>
+             <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="{{ url_for('static', filename='./img/SIGN UP (1).png')}}" class="big"> <img class="img-fluid" src="{{ url_for('static', filename='./img/SIGN UP (1).png')}}" alt="img.png" class="position image-fluid"></a></div>
       </div>
 
       <div data-aos="fade-in" class="row app-pics-row p-0 pb-1">
-          <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/SIGN IN (1).png" class="big"> <img class="img-fluid" src="./img/SIGN IN (1).png" alt="img.png" class="position"></a></div>
-            <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/home screen (2).png" class="big"> <img class="img-fluid"  src="./img/home screen (2).png" alt="img.png" class="position"></a></div>
-              <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="./img/FAVORITES (2).png" class="big"> <img class="img-fluid" src="./img/FAVORITES (2).png" alt="img.png" class="position"></a></div>
+          <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="{{ url_for('static', filename='./img/SIGN IN (1).png')}}" class="big"> <img class="img-fluid" src="{{ url_for('static', filename='./img/SIGN IN (1).png')}}" alt="img.png" class="position"></a></div>
+            <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="{{ url_for('static', filename='./img/home screen (2).png') }}" class="big"> <img class="img-fluid" src="{{ url_for('static', filename='./img/home screen (2).png') }}" alt="img.png" class="position"></a></div>
+              <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" class="col-sm-3 app-pic"> <a href="{{ url_for('static', filename='./img/FAVORITES (2).png') }}" class="big"> <img class="img-fluid" src="{{ url_for('static', filename='./img/FAVORITES (2).png') }}" alt="img.png" class="position"></a></div>
       </div>
 
     </div>
 
     <!-- phone display area ends here  -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="{{ url_for('static', filename='./img/Vector (17).png') }}" alt="" srcset=""></button>
 
 
 
@@ -166,10 +171,10 @@
       <!-- Grid column -->
       <div data-aos="zoom-in-up" data-aos-duration="2500" class="col-md-8 col-12 mt-5 footer-items-container">
         <p >Be part of the first to try it <br> - Get early access</p>
-        <form class="form-inline hero-form footer-hero-form">
+        <form method="POST" id="form-area-2" class="form-inline hero-form footer-hero-form">
           <div class="form-group mx-sm-3 mb-2">
             <label for="Email" class="sr-only">Email</label>
-            <input type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
+            <input name="email" type="email" class="form-control hero-form-control" id="Email" placeholder="Enter your email address here">
           </div>
           <button type="submit" class="btn email-btn btn-primary mb-2">Get Early Access</button>
         </form>
@@ -190,6 +195,26 @@
 </footer>
 <!-- Footer -->
 
+<!-- success modal below  -->
+<div class="modal" tabindex="-1" role="dialog" id="success_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   </div>
 
@@ -206,17 +231,17 @@
     </script>
 
   <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}} "></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js')}} "></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src=" {{ url_for('static', filename='js/bootstrap.min.js')}} "></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src=" {{ url_for('static', filename='js/mdb.min.js')}}"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js')}} "></script>
   <!-- light box  -->
-  <script src="./js/simple-lightbox.min.js"></script>
+  <script src="{{ url_for('static', filename='./js/simple-lightbox.min.js')}} "></script>
 
 
 
