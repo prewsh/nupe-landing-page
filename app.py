@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 # Configure db
 # db = yaml.load(open('db.yaml'))
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = 'us-cdbr-east-02.cleardb.com hostname'
 # db['mysql_host']
-app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_USER'] = 'b9666506382db7'
 # db['mysql_user']
-app.config['MYSQL_PASSWORD'] = '1234'
+app.config['MYSQL_PASSWORD'] = '02166bcf'
 # db['mysql_password']
 app.config['MYSQL_DB'] = 'flaskapp'
 # db['mysql_db']
