@@ -96,11 +96,9 @@ h1{
 }
 
 .hero-image{
-    /* width: 40%;
-    height: auto; */
-    /* padding-left: 30px; */
     position: absolute;
-    top: 12%;
+    top: 8%;
+    z-index: 1;
     right: 0%;
 }
 
@@ -244,6 +242,10 @@ h1{
 /* app picture styling ends  */
 
 /* footer styling  */
+
+.ml-sm-3, .mx-sm-3 {
+    margin-left: unset;
+}
 
 .page-footer{
     /* width: 100%; */

@@ -2,10 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_mysqldb import MySQL
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-# import flash
+# import flash 
 # import yaml
 
-app = Flask(__name__)
+app = Flask(__name__) 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
